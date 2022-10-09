@@ -28,7 +28,7 @@ def dump_socket(s) :
         s.close()
 
 boton = Pin(5,Pin.IN,Pin.PULL_DOWN)
-ubidots_token = 'BBFF-pt0yu4Yg1bNAejdYblYcA9O6VlapJ2'
+ubidots_token = 'Ubidots token'
 
 def update() :
     body='{"Estado": ' + repr(boton.value()) +'}'
