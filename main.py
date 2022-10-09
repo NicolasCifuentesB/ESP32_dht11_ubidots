@@ -1,20 +1,20 @@
-from machine import Pin
-import time
 import censado
+import ubidots
+import wifi
+from machine import Pin
 
 boton = Pin(5,Pin.IN,Pin.PULL_DOWN)
 led = Pin(2, Pin.OUT)
 sensor = 15
+ubidots_token = 'Ubidots token'
 
-print('INICIADO')
-
-while True :
+print('------ iniciado ------')
+while wifi.station.isconnected() :
     estado_btn = boton.value()
     if estado_btn and censado.revision(sensor) :
         led.on()
-        print('Temperatura: {}'.format(censado.temperatura(sensor)))
+        ubidots.upload(censado.temperatura(sensor), ubidots_token)
     elif not estado_btn and censado.revision(sensor) :
         led.off()
-        # print(estado_btn)
     else :
         print('Error en lectura')

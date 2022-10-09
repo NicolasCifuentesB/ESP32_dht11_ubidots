@@ -1,4 +1,4 @@
 import network
 station = network.WLAN(network.STA_IF)
 station.active(True)
-station.connect('SSID','password')
+station.connect('SSID','PASSWORD')
