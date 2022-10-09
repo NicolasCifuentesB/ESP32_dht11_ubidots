@@ -2,6 +2,7 @@ from machine import Pin
 import socket
 import time
 
+# Funcion para el envio de datos por http usando servidor
 def send_data(token,body) :
     s = socket.socket()
     s.connect(('industrial.api.ubidots.com',80))
@@ -10,6 +11,7 @@ def send_data(token,body) :
     s.send(request)
     dump_socket(s)
 
+# Funcion para verificacion del envio y cerrado del servidor
 def dump_socket(s) :
     try :
         while True :
@@ -27,9 +29,10 @@ def dump_socket(s) :
     except :
         s.close()
 
-boton = Pin(5,Pin.IN,Pin.PULL_DOWN)
-ubidots_token = 'Ubidots token'
+boton = Pin(5,Pin.IN,Pin.PULL_DOWN) # Pin para el pulsador
+ubidots_token = 'Ubidots token' # Ubidors token: Token asignado en la plataforma ubidots
 
+# Funcion para la indicacion del valor e iniciar el proceso de envio
 def update() :
     body='{"Estado": ' + repr(boton.value()) +'}'
     send_data(ubidots_token,body)
