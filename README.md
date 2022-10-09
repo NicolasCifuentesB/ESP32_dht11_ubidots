@@ -49,3 +49,7 @@ Conexión a la red wifi, es importante modificar el nombre de la red y la contra
 Ejecución del programa principal.
 
 `ampy -p 'Nombre del puerto' run main.py`
+
+Finalmente en la plataforma de ubidots se creara el dispositivo y la variable correspondiente a la cual crearle dashboards. Para este caso se uso termometro y gráfica tal como se ve a continuacion.
+
+![dashboards](/img/dashboards.png)
