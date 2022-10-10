@@ -38,9 +38,13 @@ Una vez preparado el microcontrolador es necesario guardar en su memoria los arc
 `ampy -p 'Nombre del puerto' put wifi.py`
 
 ## Orden de ejecución y montaje
-Una vez cargados los módulos es necesario seguir el siguiente proceso de montaje y compilación. En el diagrama presente a continuación se aprecia las conexiones necesarias. Siguiendo con las lineas de compilación.
+Una vez cargados los módulos es necesario seguir el siguiente proceso de montaje y compilación. En el diagrama presente a continuación se aprecia las conexiones fisicas necesarias.
 
 ![esquematico](/img/Conexion_Fisica.png)
+
+En el siguiente diagrama se presenta el circuito esquemático para una mayor claridad sobre las conexiones. Siguiendo con las lineas de compilación.
+
+![circuito](/img/Schematic_esp32_ubidots_dth11.png)
 
 Conexión a la red wifi, es importante modificar el nombre de la red y la contraseña en el módulo *wifi.py*
 
