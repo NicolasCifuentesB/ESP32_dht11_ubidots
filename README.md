@@ -40,7 +40,7 @@ Una vez preparado el microcontrolador es necesario guardar en su memoria los arc
 ## Orden de ejecución y montaje
 Una vez cargados los módulos es necesario seguir el siguiente proceso de montaje y compilación. En el diagrama presente a continuación se aprecia las conexiones necesarias. Siguiendo con las lineas de compilación.
 
-![esquematico](/img/esquematico.png)
+![esquematico](/img/Conexion_Fisica.png)
 
 Conexión a la red wifi, es importante modificar el nombre de la red y la contraseña en el módulo *wifi.py*
 
